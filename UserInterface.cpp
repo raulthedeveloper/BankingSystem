@@ -13,7 +13,9 @@ void UserInterface::Options_1() {
         CreateAccount = 1,
         Deposit,
         Withdraw,
-        CheckBalances
+        CheckBalances,
+        AccountSummary,
+        TransactionHistory
     };
 
     int usersChoice; // Change data type to int
@@ -23,7 +25,9 @@ void UserInterface::Options_1() {
         << "1. Create account\n"
         << "2. Deposit\n"
         << "3. Withdraw\n"
-        << "4. Check Balances\n";
+        << "4. Check Balances\n"
+        << "5. Account Summary\n"
+        << "6. Transaction History\n";
 
     while (!(std::cin >> usersChoice)) {
         std::cout << "Invalid input. Please enter a number." << std::endl;
@@ -35,28 +39,46 @@ void UserInterface::Options_1() {
             << "1. Create account\n"
             << "2. Deposit\n"
             << "3. Withdraw\n"
-            << "4. Check Balances\n";
+            << "4. Check Balances\n"
+            << "5. Account Summary\n"
+            << "6. Transaction History\n";
     }
 
     switch (usersChoice) {
     case CreateAccount:
         std::cout << "Creating account..." << std::endl;
         // Call function to create account
+        account.CreateAccount();
         break;
 
     case Deposit:
         std::cout << "Performing deposit..." << std::endl;
         // Call function to perform deposit
+        account.Deposit();
         break;
 
     case Withdraw:
         std::cout << "Performing withdrawal..." << std::endl;
         // Call function to perform withdrawal
+        account.WithDraw();
         break;
 
     case CheckBalances:
         std::cout << "Checking balances..." << std::endl;
         // Call function to check balances
+        account.CheckBalance();
+        break;
+
+    case AccountSummary:
+        std::cout << "Viewing account summary..." << std::endl;
+        // Call function to view account summary
+        account.AccountSummary();
+        break;
+
+    case TransactionHistory:
+        std::cout << "Viewing transaction history..." << std::endl;
+        // Call function to view transaction history
+        account.TransactionHistory();
         break;
 
     default:
@@ -66,3 +88,4 @@ void UserInterface::Options_1() {
         break;
     }
 }
+

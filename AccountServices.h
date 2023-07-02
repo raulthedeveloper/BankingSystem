@@ -5,7 +5,6 @@
 
 class AccountServices {
 public:
-    AccountServices();
     void Init();
     void Exit();
 private:

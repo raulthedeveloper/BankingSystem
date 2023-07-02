@@ -2,7 +2,6 @@
 #include <iostream>
 
 
-
 void Account::CreateAccount()
 {
 	std::cout << "Your account has been created" << std::endl;
@@ -38,3 +37,5 @@ void Account::TransactionHistory()
 	std::cout << "You have made a withdrawl" << std::endl;
 
 }
+
+

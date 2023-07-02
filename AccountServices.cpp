@@ -2,7 +2,6 @@
 
 bool IsExit = false;
 
-AccountServices::AccountServices() {}
 
 void AccountServices::Exit() {
     IsExit = true;
@@ -11,7 +10,7 @@ void AccountServices::Exit() {
 
 void AccountServices::Init() {
         
-    while (IsExit)
+    while (!IsExit)
     {
         userInterface.Greeting();
         userInterface.Options_1();

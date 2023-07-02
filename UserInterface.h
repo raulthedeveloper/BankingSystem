@@ -1,5 +1,6 @@
 #ifndef USERINTERFACE_H
 #define USERINTERFACE_H
+#include "Account.h"
 
 class UserInterface {
 public:
@@ -7,6 +8,9 @@ public:
 
     void Greeting();
     void Options_1();
+
+private:
+    Account account;
 };
 
 #endif
